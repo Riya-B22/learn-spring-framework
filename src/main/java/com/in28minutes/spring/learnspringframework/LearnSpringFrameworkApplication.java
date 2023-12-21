@@ -1,6 +1,7 @@
 package com.in28minutes.spring.learnspringframework;
 
-import com.in28minutes.spring.learnspringframework.game.*;
+import com.in28minutes.spring.learnspringframework.enterprise.example.web.MyWebController;
+import com.in28minutes.spring.learnspringframework.game.GameRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -21,6 +22,10 @@ public class LearnSpringFrameworkApplication {
 		ConfigurableApplicationContext context = SpringApplication.run(LearnSpringFrameworkApplication.class, args);
 		GameRunner runner = context.getBean(GameRunner.class);
 		runner.run();
+
+		//158 Does Spring Framework add value?
+		MyWebController controller = context.getBean(MyWebController.class);
+		System.out.println(controller.returnValueFromBusinessService());
 	}
 
 }
