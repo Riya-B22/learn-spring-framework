@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyWebController {
     @Autowired
-    private BusinessService businessService;
+    private BusinessService businessService; // dependency is injected using reflection
     public long returnValueFromBusinessService(){
         return businessService.calculateSum();
     }

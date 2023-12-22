@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class GameRunner {
     @Autowired
     private GamingConsole game;
-    public GameRunner(GamingConsole game) {
+    public GameRunner(GamingConsole game) { // Constructor based dependency injections
         this.game=game;
 
     }
