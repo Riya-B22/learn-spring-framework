@@ -9,7 +9,7 @@ import java.util.List;
 @Component
 public class BusinessService{
     @Autowired
-    private DataService dataService;// dependency is injected using reflection
+    private DataService dataService;// dependency is injected using reflection; example of Field dependency injection
 
     //setter based injection:
 //    private DataService dataService;
